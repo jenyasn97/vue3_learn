@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app {
+    width: 800px;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    text-shadow: 1px 0 1px #000;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+    }
+}
+
+input {
+    margin-top: 5px;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border: 1px solid teal;
+    outline: none;
+    border-radius: 5px;
+}
+
+.post {
+    width: 800px;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+}
+
+.done {
+    text-decoration: line-through;
+    background-color: rgba(229, 255, 113, 0.84);
+}
+
+.danger {
+    background-color: rgba(255, 0, 0, 0.75);
+    margin-left: 5px;
+}
+
+.primary {
+    background-color: rgba(0, 119, 255, 0.75);
+}
