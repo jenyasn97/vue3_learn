@@ -1,7 +1,7 @@
 <template >
 		<div class="post" :class="post.done ? 'done' : ''" >
 				<div >
-						<div ><strong >Название: </strong >Пост о {{post.title}}</div >
+						<div ><strong >Название: </strong >{{post.title}}</div >
 						<div ><strong >Описание: </strong > {{post.body}}</div >
 				</div >
 				<div >

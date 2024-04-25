@@ -1,19 +1,31 @@
 <template >
 		<div >
-				<input type="text" placeholder="Поиск поста по названию" v-model="findTitle" @input="startFilter" >
+				<input type="text" placeholder="Поиск поста по названию" v-model="findTitle" @input="$emit('update:modelValue', $event.target.value)" >
 		</div >
 </template >
 
 <script setup >
+import {defineProps, defineEmits, computed} from "vue";
 
-import {ref} from "vue";
+const props = defineProps({
+		modelValue: {
+				type: String,
+				required: true
+		}
+})
 
-const findTitle = ref('');
-const emit = defineEmits(['findTitle'])
+const findTitle = computed({
+		get() {
+				return props.modelValue
+		},
+		set(value) {
+				emit('update:modelValue', value)
+		}
+		
+})
 
-function startFilter () {
-		emit('findTitle', findTitle.value)
-}
+const emit = defineEmits(['update:modelValue'])
+
 
 
 </script >
