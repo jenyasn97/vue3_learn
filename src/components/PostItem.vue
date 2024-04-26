@@ -12,6 +12,8 @@
 </template >
 
 <script setup >
+import {defineProps} from "vue";
+
 const {post} = defineProps({
 		post: {
 				type: Object,
