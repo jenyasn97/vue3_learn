@@ -12,9 +12,6 @@
 </template >
 
 <script setup >
-
-import MyAppButton from "./ui/MyAppButton.vue";
-
 const {post} = defineProps({
 		post: {
 				type: Object,

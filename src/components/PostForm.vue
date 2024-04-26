@@ -1,6 +1,6 @@
 <template >
 		<form @submit.prevent >
-				<h2 >Создание поста</h2 >
+				<h2 style="margin-bottom: 15px">Создание поста</h2 >
 				<my-app-input
 						:type="'text'"
 						:placeholder="`Название поста`"
@@ -36,7 +36,6 @@ function createPost () {
 				emit('create', newPost)
 				title.value = ''
 				body.value = ''
-				alert('Пост создан')
 		}
 		
 }
