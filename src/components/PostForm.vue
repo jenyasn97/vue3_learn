@@ -1,9 +1,20 @@
 <template >
 		<form @submit.prevent >
 				<h2 >Создание поста</h2 >
-				<input type="text" placeholder="Название поста" v-model="title" >
-				<input type="text" placeholder="Описание поста" v-model="body" >
-				<button class="btn primary" @click="createPost" >Создать пост</button >
+				<my-app-input
+						:type="'text'"
+						:placeholder="`Название поста`"
+						v-model = "title"
+				/>
+				<my-app-input
+						:type="'text'"
+						:placeholder="`Описание поста`"
+						v-model="body"
+				/>
+				<my-app-button
+						:class="`primary`"
+						@click="createPost" >Создать пост
+				</my-app-button >
 		</form >
 </template >
 

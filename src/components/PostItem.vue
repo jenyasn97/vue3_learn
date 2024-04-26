@@ -5,13 +5,15 @@
 						<div ><strong >Описание: </strong > {{post.body}}</div >
 				</div >
 				<div >
-						<button class="btn primary" @click="$emit('donePost', post.id)" >Готово</button >
-						<button class="btn danger" @click="$emit('removePost', post.id)" >Удалить</button >
+						<my-app-button :class="`primary`" @click="$emit('donePost', post.id)" >Готово</my-app-button >
+						<my-app-button :class="`danger`" @click="$emit('removePost', post.id)" >Удалить</my-app-button >
 				</div >
 		</div >
 </template >
 
 <script setup >
+
+import MyAppButton from "./ui/MyAppButton.vue";
 
 const {post} = defineProps({
 		post: {

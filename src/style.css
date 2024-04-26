@@ -19,6 +19,12 @@ h3 {
     margin-top: 15px;
 }
 
+form {
+     .input{
+        margin-right: 15px;
+    }
+}
+
 .btn {
     color: white;
     font-size: 16px;
@@ -36,14 +42,7 @@ h3 {
     }
 }
 
-input {
-    margin-top: 5px;
-    margin-right: 20px;
-    padding: 10px 15px;
-    border: 1px solid teal;
-    outline: none;
-    border-radius: 5px;
-}
+
 
 .post {
     width: 800px;

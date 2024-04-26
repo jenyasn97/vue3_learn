@@ -1,7 +1,12 @@
 <template >
 		<div >
 				<h3 >Список постов</h3 >
-				<the-filter :model-value="modelValue" @update:modelValue="$emit('update:modelValue', $event)"></the-filter >
+				<my-app-input :type="'text'"
+																		:placeholder="'Поиск поста'"
+																		:model-value="modelValue"
+																		@update:modelValue="$emit('update:modelValue', $event)">
+						
+				</my-app-input >
 				<span v-if="!posts.length" >Постов не найдено</span >
 				<PostItem v-for="post in posts" :key="post.id"
 														:post="post"
@@ -14,8 +19,7 @@
 
 <script setup >
 import PostItem from "./PostItem.vue";
-import TheFilter from "../ui/TheFilter.vue";
-import {defineProps, computed} from "vue";
+import {defineProps} from "vue";
 
 const {posts, modelValue} = defineProps({
 		posts: {
