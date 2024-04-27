@@ -1,5 +1,6 @@
 import MyAppButton  from "./MyAppButton.vue";
 import MyAppInput from "./MyAppInput.vue";
 import MyAppDialog from "./MyAppDialog.vue";
+import MyAppSelect from "./MyAppSelect.vue";
 
-export default [ MyAppButton, MyAppInput,  MyAppDialog]
+export default [ MyAppButton, MyAppInput,  MyAppDialog, MyAppSelect]

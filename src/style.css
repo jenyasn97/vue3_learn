@@ -53,9 +53,21 @@ form {
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
-
-
 }
+.app_btns{
+    display: flex;
+    justify-content: space-between;
+
+    select{
+        padding: 10px 15px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+}
+
 
 span {
     display: block;
