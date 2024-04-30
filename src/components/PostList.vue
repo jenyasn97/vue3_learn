@@ -16,6 +16,7 @@
 																:post="post"
 																@remove-post="$emit('removePost', post.id)"
 																@done-post="$emit('donePost', post.id)"
+																@open-post="$emit('openPost', post.id)"
 						/>
 				</transition-group >
 		
@@ -24,7 +25,6 @@
 
 <script setup >
 import PostItem from "./PostItem.vue";
-import {defineProps} from "vue";
 
 const {posts, modelValue} = defineProps({
 		posts: {

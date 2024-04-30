@@ -1,5 +1,5 @@
 <template >
-		<div class="post" :class="post.done ? 'done' : ''" >
+		<div class="post" :class="post.done ? 'done' : ''" @click="$emit('openPost', post.id)" >
 				<div class="post_text" >
 						<div ><strong >Номер: </strong >{{post.id}}</div >
 						<div ><strong >Название: </strong >{{post.title}}</div >
@@ -13,7 +13,6 @@
 </template >
 
 <script setup >
-import {defineProps} from "vue";
 
 const {post} = defineProps({
 		post: {
