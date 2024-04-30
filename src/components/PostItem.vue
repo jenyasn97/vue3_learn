@@ -1,6 +1,7 @@
 <template >
 		<div class="post" :class="post.done ? 'done' : ''" >
-				<div class="post_text">
+				<div class="post_text" >
+						<div ><strong >Номер: </strong >{{post.id}}</div >
 						<div ><strong >Название: </strong >{{post.title}}</div >
 						<div ><strong >Описание: </strong > {{post.body}}</div >
 				</div >
@@ -24,7 +25,7 @@ const {post} = defineProps({
 </script >
 
 <style scoped >
-.post_text{
+.post_text {
 		width: 70%;
 }
 

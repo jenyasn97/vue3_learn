@@ -20,7 +20,7 @@ h3 {
 }
 
 form {
-     .input{
+    .input {
         margin-right: 15px;
     }
 }
@@ -43,7 +43,6 @@ form {
 }
 
 
-
 .post {
     width: 800px;
     padding: 15px;
@@ -54,11 +53,12 @@ form {
     justify-content: space-between;
     border-radius: 5px;
 }
-.app_btns{
+
+.app_btns {
     display: flex;
     justify-content: space-between;
 
-    select{
+    select {
         padding: 10px 15px;
         background: none;
         border: none;
@@ -86,4 +86,33 @@ span {
 
 .primary {
     background-color: rgba(0, 119, 255, 0.75);
+}
+
+.page__wrapper {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    padding: 10px;
+    border: 1px solid teal;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.page__current {
+    border: 2px solid teal;
+    font-weight: bold;
+    cursor: default;
+}
+
+.observer {
+    height: 30px;
+    background: #d71616;
 }
