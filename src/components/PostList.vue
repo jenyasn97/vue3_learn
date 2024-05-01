@@ -2,6 +2,7 @@
 		<div >
 				<h3 >Список постов</h3 >
 				<my-app-input
+						v-focus
 						:type="'text'"
 						:placeholder="'Поиск поста'"
 						style="margin-top: 15px"

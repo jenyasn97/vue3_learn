@@ -1,10 +1,11 @@
 <template >
 		<form @submit.prevent >
-				<h2 style="margin-bottom: 15px">Создание поста</h2 >
+				<h2 style="margin-bottom: 15px" >Создание поста</h2 >
 				<my-app-input
+						v-focus
 						:type="'text'"
 						:placeholder="`Название поста`"
-						v-model = "title"
+						v-model="title"
 				/>
 				<my-app-input
 						:type="'text'"

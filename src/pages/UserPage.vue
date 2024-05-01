@@ -22,7 +22,7 @@
 				@done-post="donePost"
 				@open-post="$router.push(`/posts/${$event}`)"
 		/>
-		<div ref="observer" class="observer" ></div >
+		<div v-intersection="loadMorePosts" class="observer" ></div >
 		
 		<!--		<div class="page__wrapper" >-->
 		<!--				<div-->
@@ -114,6 +114,7 @@ async function fetchPosts () {
 
 async function loadMorePosts () {
 		try {
+				page.value += 1
 				const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
 						params: {
 								_page: page.value,
@@ -133,26 +134,10 @@ async function loadMorePosts () {
 // }
 
 
-onMounted(async () => {
-				setTimeout(() => fetchPosts(),
-						500)
+onMounted(() => {
+				fetchPosts()
 		}
 )
-
-onMounted(() => {
-		const options = {
-				rootMargin: '0px',
-				threshold: 1.0
-		}
-		const callback = (entries) => {
-				if (entries[0].isIntersecting && page.value < totalPages.value) {
-						page.value++
-						loadMorePosts()
-				}
-		}
-		const observer = new IntersectionObserver(callback, options)
-		observer.observe(document.querySelector('.observer'))
-})
 
 
 // const sortedPosts = computed(() => {
